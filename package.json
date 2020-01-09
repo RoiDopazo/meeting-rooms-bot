@@ -4,15 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "start:teams": "node ./controllers/TeamsBotController.js",
-    "start:slack": "node ./controllers/SlackBotController.js",
-    "deploy:ngrok": "ngrok http 3000"
+    "start:teams": "PORT=9999 node ./controllers/TeamsBotController.js",
+    "start:slack": "PORT=9998 node ./controllers/SlackBotController.js",
+    "start:teams:bg": "npm run start:teams &",
+    "start:slack:bg": "npm run start:slack &",
+    "start": "npm run start:teams:bg && npm run start:slack",
+    "deploy:ngrok": "ngrok http 9998"
   },
   "dependencies": {
+    "botbuilder-adapter-slack": "^1.0.7",
+    "botbuilder-storage-mongodb": "^0.9.5",
     "botkit": "^4.6.0",
     "botkit-plugin-cms": "^1.0.3",
-    "botbuilder-storage-mongodb": "^0.9.5",
     "dotenv": "^7.0.0"
   },
   "devDependencies": {

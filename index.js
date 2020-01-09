@@ -6,4 +6,5 @@
 
 // This is the main file for the meeting rooms bot.
 
-const TeamsBotController = require('./controllers/TeamsBotController')
+// Runs slack bot
+const SlackBotController = require('./controllers/SlackBotController')
