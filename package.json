@@ -2,9 +2,11 @@
   "name": "botkit-meeting-rooms-bot",
   "version": "1.0.0",
   "description": "",
-  "main": "bot.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node bot.js",
+    "start": "node index.js",
+    "start:teams": "node ./controllers/TeamsBotController.js",
+    "start:slack": "node ./controllers/SlackBotController.js",
     "deploy:ngrok": "ngrok http 3000"
   },
   "dependencies": {
