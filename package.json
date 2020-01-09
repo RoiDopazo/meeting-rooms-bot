@@ -1,5 +1,5 @@
 {
-  "name": "botkit-meeting-rooms bot",
+  "name": "botkit-meeting-rooms-bot",
   "version": "1.0.0",
   "description": "",
   "main": "bot.js",
@@ -12,5 +12,9 @@
     "botkit-plugin-cms": "^1.0.3",
     "botbuilder-storage-mongodb": "^0.9.5",
     "dotenv": "^7.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "prettier": "^1.19.1"
   }
 }
