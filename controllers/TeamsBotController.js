@@ -6,9 +6,6 @@ const {
   MICROSOFT_TEAMS_APP_PASSWORD,
 } = require('../env')
 
-// Load process.env values from .env file
-require('dotenv').config()
-
 const controller = new Botkit({
   webhook_uri: MICROSOFT_TEAMS_URI,
 
